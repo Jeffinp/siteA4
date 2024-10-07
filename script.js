@@ -9,15 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add a dark mode toggle
     addDarkModeToggle();
 
-    // Add a word counter
-    addWordCounter();
-
-    // Add a reading time estimator
-    addReadingTimeEstimator();
-
-    // Add hover effects to paragraphs
-    addParagraphHoverEffects();
-
     // Add a floating action button for sharing
     addShareButton();
 
