@@ -98,7 +98,7 @@ h2 {
 @media (max-width: 500px) {
     .container {
         width: 100%;
-        padding: 2mm;
+        padding: 5mm;
     }
 }
 /* Responsive adjustments */

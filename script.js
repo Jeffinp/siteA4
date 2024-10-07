@@ -154,10 +154,8 @@ style.textContent = `
         overflow-x: hidden; /* Previne rolagem horizontal */
     }
     .container {
-        width: 210mm;
         background-color: var(--paper-color);
         box-shadow: 0 5px 15px var(--shadow-color);
-        padding: 25mm;
         background-image: repeating-linear-gradient(
             to bottom,
             var(--line-color),
