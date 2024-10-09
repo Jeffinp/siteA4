@@ -77,7 +77,6 @@ footer {
     color: #777;
     padding: 20px 0;
     position: absolute;
-   
     left: 0;
     width: 100%;
 }
@@ -93,6 +92,7 @@ h2 {
     color: var(--text-color);
     border-bottom: 2px solid var(--line-color);
     padding-bottom: 10px;
+    text-align: left;
 }
 
 /* Responsive adjustments */
@@ -114,7 +114,6 @@ h2 {
         font-size: 14px;
     }
 }
-
 
 @media (max-width: 500px) {
     .container {
