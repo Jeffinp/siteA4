@@ -1,35 +1,102 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For my Love</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Formilov</title>
     <link rel="shortcut icon" href="heart.png" type="image/x-png">
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(45deg, #FFE4E1, #E6E6FA, #F0F8FF, #F5F5DC, #FFF0F5);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            font-family: Arial, sans-serif;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        #botao {
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 25px;
+            background-color: #FF69B4;
+            color: white;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            position: absolute;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            white-space: nowrap;
+        }
+
+        #botao:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="hole"></div>
-        <header>
-            <h1>For my Love</h1>
-        </header>
+    <button id="botao">quer ver? é só clicar >:)</button>
 
-        <main>
-            <article>
-                <h2>Minha Amada Juli 💖✨</h2>
-                <p>Desde o momento em que você entrou na minha vida, tudo ganhou mais cor 🌈. Seu jeito único de ser, seu olhar doce e atento ao mundo ao seu redor, me faz admirar você cada vez mais. Cada sorriso seu ilumina meu dia, e eu sou eternamente grato por ter a chance de caminhar ao seu lado 🌟.</p>
-        
-                <p>Eu te vejo como uma verdadeira inspiração ✨. Sua força em enfrentar os desafios da vida, a forma como você lida com tudo ao seu redor, me faz querer ser uma pessoa melhor. Ao seu lado, aprendo o valor das pequenas coisas, da paciência e do amor verdadeiro. Quero estar aqui, segurando sua mão 🤝, sendo seu apoio nos dias bons e nos dias difíceis, celebrando cada conquista e te abraçando forte nos momentos mais delicados.</p>
-        
-                <p>Você é o meu porto seguro ⚓, meu amor eterno. Cada momento ao seu lado é precioso, e eu mal posso esperar para construir mais memórias com você. Que possamos rir juntos, sonhar juntos, e criar uma vida cheia de amor e cumplicidade 👫. Sua felicidade é o que mais importa para mim, porque te ver sorrir é o que faz meu coração bater mais forte 💓.</p>
-            </article>
-        </main>
+    <script>
+        const botao = document.getElementById('botao');
+        let tentativas = 0;
 
-        <footer>
-            <p>&copy; Jeff - 2024 Meu Blog De Amor</p>
-        </footer>
-    </div>
+        botao.addEventListener('click', function(e) {
+            tentativas++;
+            
+            // Atualiza o texto do botão baseado no número de tentativas
+            if (tentativas === 5) {
+                botao.textContent = "Sei não, não tá clicando direito";
+            } else if (tentativas === 9) {
+                botao.textContent = "Tá determinada o suficiente?";
+            } else if (tentativas === 13) {
+                botao.textContent = "Tudo bem, receba seu presente lindo! :D 💖✨";
+            }
+            
+            if (tentativas < 15) {
+                e.preventDefault();
+                
+                // Anima o botão
+                botao.style.animation = 'shake 0.5s ease';
+                setTimeout(() => {
+                    botao.style.animation = '';
+                }, 500);
 
-    <script src="./script.js"></script>
+                // Move o botão para uma posição aleatória
+                const maxX = window.innerWidth - botao.offsetWidth;
+                const maxY = window.innerHeight - botao.offsetHeight;
+                
+                const novoX = Math.random() * maxX;
+                const novoY = Math.random() * maxY;
+                
+                botao.style.left = novoX + 'px';
+                botao.style.top = novoY + 'px';
+            } else {
+                // Na décima quinta tentativa, redireciona
+                window.location.href = 'Presennte.html';
+            }
+        });
+    </script>
 </body>
 </html>
