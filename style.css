@@ -1,5 +1,4 @@
-
-
+/* style.css */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 :root {
@@ -20,6 +19,7 @@ body {
     justify-content: center;
     align-items: flex-start;
     min-height: 100vh;
+    overflow: hidden; /* Para os confetes não criarem scroll */
 }
 
 .container {
@@ -37,6 +37,7 @@ body {
     position: relative;
     overflow-y: auto;
     max-height: 90vh;
+    z-index: 0; /* Para ficar acima dos confetes */
 }
 
 .hole {
@@ -140,3 +141,20 @@ html {
 .container > * {
     animation: fadeIn 0.5s ease-out forwards;
 }
+
+
+
+/* Estilos para os confetes */
+.confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background-color: #f00;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Adiciona diferentes cores para os confetes */
+.confetti:nth-child(3n) { background-color: #ff0; }
+.confetti:nth-child(3n+1) { background-color: #f0f; }
+.confetti:nth-child(3n+2) { background-color: #0ff; }
