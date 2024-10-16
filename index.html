@@ -61,7 +61,7 @@
     <script>
         const botao = document.getElementById('botao');
         let tentativas = 0;
-
+    
         botao.addEventListener('click', function(e) {
             tentativas++;
             
@@ -82,13 +82,15 @@
                 setTimeout(() => {
                     botao.style.animation = '';
                 }, 500);
-
+    
                 // Move o botão para uma posição aleatória
                 const maxX = window.innerWidth - botao.offsetWidth;
                 const maxY = window.innerHeight - botao.offsetHeight;
                 
-                const novoX = Math.random() * maxX;
-                const novoY = Math.random() * maxY;
+                // Adiciona uma margem mínima para garantir que o botão não saia da tela
+                const margem = 20; // margem de segurança de 20px
+                const novoX = Math.random() * (maxX - margem * 2) + margem;
+                const novoY = Math.random() * (maxY - margem * 2) + margem;
                 
                 botao.style.left = novoX + 'px';
                 botao.style.top = novoY + 'px';
@@ -98,5 +100,6 @@
             }
         });
     </script>
+    
 </body>
 </html>

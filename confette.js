@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function playConfettiSound() {
         const audio = document.getElementById('confettiSound');
         if (audio) {
-            audio.volume = 0.5; // Reduz o volume para 50%
+            audio.volume = 1;
             audio.play().catch(error => {
                 console.log('Erro ao reproduzir som:', error);
             });
