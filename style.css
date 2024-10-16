@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 :root {
     --bg-color: #191827;
@@ -10,7 +12,7 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Press Start 2P', cursive;
     background-color: var(--bg-color);
     margin: 0;
     padding: 20px;
@@ -34,7 +36,7 @@ body {
     );
     position: relative;
     overflow-y: auto;
-    max-height: 90vh; /* Limit height on smaller screens */
+    max-height: 90vh;
 }
 
 .hole {
@@ -56,29 +58,25 @@ header {
 h1 {
     color: var(--text-color);
     margin-bottom: 15px;
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-shadow: 1px 1px 2px var(--shadow-color);
 }
 
 h3 {
+    font-size: 0.8rem;
     color: var(--text-color);
 }
 
 article {
     padding: 20px;
-    text-align: justify;
-    font-size: 16px;
+    font-size: 12px;
     color: var(--text-color);
     line-height: 1.6;
 }
 
-footer {
-    text-align: center;
-    color: #777;
-    padding: 20px 0;
-    position: absolute;
-    left: 0;
-    width: 100%;
+
+a {
+    font-size: 0.8rem;
 }
 
 p {
@@ -92,7 +90,13 @@ h2 {
     color: var(--text-color);
     border-bottom: 2px solid var(--line-color);
     padding-bottom: 10px;
+    font-size: 0.8rem;
     text-align: left;
+}
+
+/* Pixel Emojis */
+p::before {
+    font-size: 16px;
 }
 
 /* Responsive adjustments */
@@ -136,4 +140,3 @@ html {
 .container > * {
     animation: fadeIn 0.5s ease-out forwards;
 }
-
