@@ -87,7 +87,7 @@ function addDarkModeToggle() {
 function addShareButton() {
     const shareButton = document.createElement('button');
     shareButton.id = 'share-button';
-    shareButton.textContent = 'Share';
+    shareButton.textContent = 'Compartilhar';
     shareButton.style.position = 'fixed';
     shareButton.style.bottom = '20px';
     shareButton.style.right = '20px';
